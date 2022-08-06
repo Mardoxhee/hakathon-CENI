@@ -13,13 +13,9 @@ app.post("/ussd", (req, res) => {
 
   if (text == "") {
     // This is the first request. Note how we start the response with CON
-    response = `Choisir votre Langue
-        1. LINGALA
-        2. TSHILUBA
-        3. KIKONGO
-        4. SWAHILI
-        5. FRANçAIS
-        6. ANGLAIS`;
+    response = `CON What would you like to check
+        1. My account
+        2. My phone number`;
   } else if (text == "1") {
     // Business logic for first level response
     response = `CON Choose account information you want to view
