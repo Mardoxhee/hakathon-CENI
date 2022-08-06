@@ -14,7 +14,7 @@ app.post("/ussd", (req, res) => {
   if (text == "") {
     // This is the first request. Note how we start the response with CON
     response = `CON What would you like to check
-        1. My account
+        1. Français
         2. My phone number`;
   } else if (text == "1") {
     // Business logic for first level response
