@@ -16,10 +16,7 @@ app.post("/ussd", (req, res) => {
     response = `Choisir la langue
         1. Lingala
         2. Swahili
-        3. Tshiluba
-        4. Kikonga
-        5. Francais
-        6. Anglais
+   
         `;
   } else if (text == "1") {
     // Business logic for first level response
