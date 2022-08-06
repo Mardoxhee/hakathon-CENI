@@ -13,13 +13,20 @@ app.post("/ussd", (req, res) => {
 
   if (text == "") {
     // This is the first request. Note how we start the response with CON
-    response = `CON What would you like to check
-        1. Français
-        2. My phone number`;
+    response = `CON choisir la langue
+        1. Lingala
+        2. Swahili
+        3. Kikongo
+        4. Tshiluba
+        5. Français
+        6. Anglais`;
   } else if (text == "1") {
     // Business logic for first level response
-    response = `CON Choose account information you want to view
-        1. Account number`;
+    response = `CON Olingi oyeba nini
+        1. Mayebisi ya CENI
+        2. Ndako ya maponomi
+        3. Mukolo ya maponomi
+        4. Zonga sima`;
   } else if (text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
