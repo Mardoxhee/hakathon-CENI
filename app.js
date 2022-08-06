@@ -15,9 +15,7 @@ app.post("/ussd", (req, res) => {
     // This is the first request. Note how we start the response with CON
     response = `Choisir la langue
         1. Lingala
-        2. Swahili
-   
-        `;
+        2. Swahili`;
   } else if (text == "1") {
     // Business logic for first level response
     response = `CON Choose account information you want to view
