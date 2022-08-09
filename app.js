@@ -24,13 +24,23 @@ app.post("/ussd", (req, res) => {
     // Business logic for first level response
     response = `CON Olingi oyeba nini
         1. Mayebisi ya CENI
-        2. Ndako ya maponomi
-        3. Mukolo ya maponomi
+        2. Ndako ya maponami
+        3. Mukolo ya maponami
         4. Zonga sima`;
-  } else if (text == "2") {
+  } else if (text == "1") {
+    response = `CON Olingi oyeba 
+        1. Mibeko ya maponami
+        2. Ba sango ya suka`;
+  } else if (text == "1") {
+    response = `CON Olingi oyeba 
+        1. Dispositions generales 
+        2. Missions et attributions
+        3. Composition et statut des membres
+        4. SUivant`;
+  } else if (text == "1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    response = `END Your phone number is ${phoneNumber}`;
+    response = `END Vous venez de recevoir un sms`;
   } else if (text == "1*1") {
     // This is a second level response where the user selected 1 in the first instance
     const accountNumber = "ACC100101";
