@@ -36,17 +36,18 @@ app.post("/ussd", (req, res) => {
         1. Dispositions generales 
         2. Missions et attributions
         3. Composition et statut des membres
-        4. SUivant`;
+        4. Suivant`;
   } else if (text == "1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     response = `END Vous venez de recevoir un sms`;
-  } else if (text == "1*1") {
-    // This is a second level response where the user selected 1 in the first instance
-    const accountNumber = "ACC100101";
-    // This is a terminal request. Note how we start the response with END
-    response = `END Your account number is ${accountNumber}`;
   }
+  // } else if (text == "1*1") {
+  //   // This is a second level response where the user selected 1 in the first instance
+  //   const accountNumber = "ACC100101";
+  //   // This is a terminal request. Note how we start the response with END
+  //   response = `END Your account number is ${accountNumber}`;
+  // }
 
   // Send the response back to the API
   res.set("Content-Type: text/plain");
