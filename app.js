@@ -22,22 +22,22 @@ app.post("/ussd", (req, res) => {
         6. Anglais`;
   } else if (text == "1") {
     // Business logic for first level response
-    response = `CON Olingi oyeba nini
-        1. Mayebisi ya CENI
-        2. Ndako ya maponomi
-        3. Mukolo ya maponomi
-        4. Zonga sima`;
+    response = `CON vous souhaitez
+        1. Vous informer sur CENI
+        2. Bureux de vote
+        3. Calendrier du scrutin
+        4. Retour`;
   } else if (text == "1*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    response = `CON olingi oyeba 
-        1. Mikebo ya maponami
-        2. Ba sango ya CENI`;
+    response = `CON vous voulez savoir 
+        1. La lois électorale
+        2. Les actualités de la CENI`;
   } else if (text == "1*1*1") {
     // This is a second level response where the user selected 1 in the first instance
 
     // This is a terminal request. Note how we start the response with END
-    response = `CON mibeko ya maponami 
+    response = `CON La lois électorale 
         1. Dispositions generales
         2. Missions et attributions
         3. Composition et statut des membres
