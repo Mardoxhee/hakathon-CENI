@@ -14,11 +14,11 @@ app.post("/ussd", (req, res) => {
   if (text == "") {
     // This is the first request. Note how we start the response with CON
     response = `CON choisir la langue
-        1. Lingala
+        1. Francais
         2. Swahili
         3. Kikongo
         4. Tshiluba
-        5. Français
+        5. Lingala
         6. Anglais`;
   } else if (text == "1") {
     // Business logic for first level response
